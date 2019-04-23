@@ -87,7 +87,11 @@ extern NSString *const kAppiraterReminderRequestDate;
 
 @interface Appirater : NSObject <UIAlertViewDelegate, SKStoreProductViewControllerDelegate>
 
+// Expose some details of Appirater:
 + (Appirater *)sharedInstance;
+- (BOOL)ratingConditionsHaveBeenMet;
+- (BOOL)ratingAlertIsAppropriate;
+
 
 /*!
  UIAlertController for iOS 8 and later, otherwise UIAlertView
